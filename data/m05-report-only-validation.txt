@@ -1,0 +1,41 @@
+Microsoft Entra Conditional Access - Milestone 5 Scenario Validation
+
+EvidenceClassification: Sanitized public evidence
+TestIdentityClass: Pilot contractor identity
+PublishedIdentifiers: None
+
+ValidatedPolicy: CA001-BLOCK-LegacyAuthentication-AllUsers
+ValidatedPolicy: CA004-GRANT-MFA-ManagementSurfaces-AllUsers
+ValidatedPolicy: CA005-GRANT-MFA-SecurityInfoRegistration-AllUsers
+ValidatedPolicy: CA009-SESSION-NoPersistentBrowser-Contractors
+ValidatedPolicy: CA010-BLOCK-DeviceCodeFlow-AllUsers
+
+CA001WhatIfApplicable: Passed
+CA001ModernBrowserNotApplicable: Passed
+LegacyReviewWindowDays: 30
+LegacyNonInteractiveEventCount: 0
+LegacyAuthenticationGeneratedForTest: False
+
+CA004WhatIfApplicable: Passed
+CA004ReportOnlyResult: reportOnlySuccess
+CA005WhatIfApplicable: Passed
+CA005ReportOnlyResult: reportOnlySuccess
+CA005AuthenticationMethodChanged: False
+CA009ReportOnlyResult: reportOnlySuccess
+CA009SessionControlObserved: PersistentBrowserSessionMode
+CA009SessionEnforcementExecuted: False
+CA010WhatIfApplicable: Passed
+CA010ReportOnlyResult: reportOnlyFailure
+CA010OriginalTransferMethod: Device code flow
+DeviceCodeSignalObserved: True
+DeviceCodeSignalVerificationSource: CA010 report-only failure matched the verified deviceCodeFlow policy condition; portal sign-in details independently confirmed the original transfer method.
+
+EmergencyAccount01Evaluation: Passed
+EmergencyAccount02Evaluation: Passed
+EnforcedPolicyCount: 0
+RequiredScreenshotCount: 11
+MissingScreenshotCount: 0
+SensitiveIdentifiersPublished: 0
+ValidationPassed: True
+
+PrivacyNote: User principal names, object identifiers, tenant identifiers, request identifiers, session identifiers, IP addresses, token identifiers, authentication codes, and credentials are excluded.

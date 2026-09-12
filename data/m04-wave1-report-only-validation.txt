@@ -1,0 +1,59 @@
+Microsoft Entra Conditional Access - Milestone 4 Report-Only Validation
+Wave 1 Report-only Configuration Validation
+ValidationDateUTC: 2026-09-07
+
+Policy: CA001-BLOCK-LegacyAuthentication-AllUsers
+State: enabledForReportingButNotEnforced
+IncludedGroups: GG_CA_Pilot_Workforce
+ExcludedGroups: GG_CA_Exclude_EmergencyAccess
+Applications: All resources
+ClientApps: exchangeActiveSync, other
+GrantControls: block
+ConfigurationMatchedApprovedMatrix: True
+
+Policy: CA004-GRANT-MFA-ManagementSurfaces-AllUsers
+State: enabledForReportingButNotEnforced
+IncludedGroups: GG_CA_Pilot_Workforce
+ExcludedGroups: GG_CA_Exclude_EmergencyAccess
+Applications: Microsoft Admin Portals, Azure Resource Manager
+AuthenticationStrength: Multifactor authentication
+ConfigurationMatchedApprovedMatrix: True
+
+Policy: CA005-GRANT-MFA-SecurityInfoRegistration-AllUsers
+State: enabledForReportingButNotEnforced
+IncludedGroups: GG_CA_Pilot_Workforce
+ExcludedGroups: GG_CA_Exclude_EmergencyAccess
+GuestExclusion: All six supported guest and external user types
+UserActions: Register security information
+AuthenticationStrength: Multifactor authentication
+ConfigurationMatchedApprovedMatrix: True
+
+Policy: CA009-SESSION-NoPersistentBrowser-Contractors
+State: enabledForReportingButNotEnforced
+IncludedGroups: GG_IAM_All_Contractors
+ExcludedGroups: GG_CA_Exclude_EmergencyAccess
+Applications: All resources
+ClientApps: browser
+PersistentBrowser: never
+ConfigurationMatchedApprovedMatrix: True
+
+Policy: CA010-BLOCK-DeviceCodeFlow-AllUsers
+State: enabledForReportingButNotEnforced
+IncludedGroups: GG_CA_Pilot_Workforce
+ExcludedGroups: GG_CA_Exclude_EmergencyAccess
+Applications: All resources
+AuthenticationFlows: deviceCodeFlow
+GrantControls: block
+ConfigurationMatchedApprovedMatrix: True
+
+ExpectedPolicyCount: 5
+ObservedPolicyCount: 5
+MissingPolicyCount: 0
+WrongStatePolicyCount: 0
+ReportOnlyInventoryPassed: True
+AllConfigurationsMatchedApprovedMatrix: True
+EnforcedPolicyCount: 0
+ScenarioTestingExecuted: False
+NextMilestone: Milestone 5 - Scenario testing and report-only analysis
+
+Sanitization: No user principal name, personal identifier, directory object identifier, tenant identifier, session identifier, credential, or authentication token is included.

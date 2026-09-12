@@ -1,0 +1,83 @@
+Microsoft Entra Conditional Access - Milestone 7 Operational Handover and Final Assurance
+
+EvidenceClassification: Sanitized public evidence
+TestEnvironment: Isolated synthetic lab tenant
+AssessmentDate: 2026-09-09
+PublishedIdentifiers: None
+
+FinalUserCreatedPolicyCount: 5
+FinalMicrosoftManagedPolicyCount: 0
+FinalEnabledPolicyCount: 5
+DeletedConditionalAccessPolicyCount: 0
+
+ValidatedPolicy: CA001-BLOCK-LegacyAuthentication-AllUsers
+ValidatedPolicy: CA004-GRANT-MFA-ManagementSurfaces-AllUsers
+ValidatedPolicy: CA005-GRANT-MFA-SecurityInfoRegistration-AllUsers
+ValidatedPolicy: CA009-SESSION-NoPersistentBrowser-Contractors
+ValidatedPolicy: CA010-BLOCK-DeviceCodeFlow-AllUsers
+
+CA001FinalState: On
+CA004FinalState: On
+CA005FinalState: On
+CA009FinalState: On
+CA010FinalState: On
+
+FinalEmergencyExclusionGroupDirectMemberCount: 2
+EmergencyAccount01FinalAccessTest: Passed
+EmergencyAccount02FinalAccessTest: Passed
+EmergencyAccessReviewCadenceDays: 90
+
+FinalWorkforcePilotDirectMemberCount: 3
+FinalContractorScopeDirectMemberCount: 5
+PermanentGlobalAdministratorCountObserved: 4
+LeastPrivilegeFindingAcceptedTemporarily: True
+LeastPrivilegeRemediationTarget: Privileged Identity Management project
+
+ConditionalAccessFailureReviewWindowDays: 7
+ConditionalAccessFailureEventCount: 1
+ExpectedCA010DeviceCodeFailureCount: 1
+UnexpectedConditionalAccessFailureCount: 0
+ConditionalAccessSuccessActivityObserved: True
+ExpectedKmsiInterruptCodeObserved: 50140
+
+ConditionalAccessAuditReviewWindowDays: 7
+SuccessfulSecurityDefaultsTransitionCount: 1
+SuccessfulConditionalAccessPolicyCreateCount: 5
+SuccessfulConditionalAccessPolicyUpdateCount: 5
+FailedConditionalAccessChangeCount: 0
+UnexplainedConditionalAccessChangeCount: 0
+
+EntraIDP2SubscriptionStatus: Active
+EntraIDP2AssignedLicenseCount: 7
+EntraIDP2PurchasedLicenseCount: 100
+EntraIDP2AvailableLicenseCount: 93
+EntraIDP2ExpirationDate: 2026-10-06
+EntraIDP2RecurringBilling: Off
+LicenseExpiryDependencyDocumented: True
+StandardConditionalAccessLicenseBaseline: Entra ID P1
+RiskBasedConditionalAccessLicenseBaseline: Entra ID P2
+CA009TargetLicenseMappingPubliclyProven: False
+
+SecurityDefaultsReplacementCoverageTenantWideProven: False
+EmergencyAuthenticationProductionIndependent: False
+
+InsightsReportingWorkbookImplemented: False
+InsightsReportingLimitationDocumented: True
+ProductionWideDeploymentClaimed: False
+DeferredPolicyCount: 5
+OperationalControlRegisterComplete: True
+MonitoringRunbookComplete: True
+RollbackRunbookRetained: True
+
+RequiredMilestone7ScreenshotCount: 12
+MissingMilestone7ScreenshotCount: 0
+ScreenshotPrivacyReviewPassed: True
+SensitiveIdentifiersPublished: 0
+OperationalHandoverPassed: True
+FinalTechnicalAssurancePassed: True
+FinalTechnicalAssuranceScope: ControlledWave1Only
+ImplementationComplete: True
+ValidationPassed: True
+
+PrivacyNote: Public evidence excludes user principal names, personal names, object identifiers, tenant identifiers, request identifiers, session identifiers, IP addresses, authentication codes, credentials, and private emergency-account details.
+ScopeNote: Completion applies only to the documented isolated tenant and controlled Wave 1 populations. It is not organization-wide production approval.

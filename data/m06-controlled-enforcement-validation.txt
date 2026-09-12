@@ -1,0 +1,74 @@
+Microsoft Entra Conditional Access - Milestone 6 Controlled Enforcement Validation
+
+EvidenceClassification: Sanitized public evidence
+TestEnvironment: Isolated synthetic lab tenant
+TestIdentityClass: Pilot contractor identity
+PublishedIdentifiers: None
+
+ObservationWindowClassification: Shortened controlled-lab observation
+ProductionEquivalentObservationWindow: False
+ObservationWindowExceptionDocumented: True
+
+ValidatedPolicy: CA001-BLOCK-LegacyAuthentication-AllUsers
+ValidatedPolicy: CA004-GRANT-MFA-ManagementSurfaces-AllUsers
+ValidatedPolicy: CA005-GRANT-MFA-SecurityInfoRegistration-AllUsers
+ValidatedPolicy: CA009-SESSION-NoPersistentBrowser-Contractors
+ValidatedPolicy: CA010-BLOCK-DeviceCodeFlow-AllUsers
+
+CA001PolicyState: On
+CA001ModernBrowserResult: Not applied
+CA001EnforcedWhatIfBlock: Passed
+CA001RealLegacyAuthenticationGenerated: False
+CA001SafeTestLimitationDocumented: True
+
+CA004PolicyState: On
+CA004MFAChallengeObserved: True
+CA004ConditionalAccessResult: Success
+
+CA005PolicyState: On
+CA005MFAChallengeObserved: True
+CA005ConditionalAccessResult: Success
+CA005AuthenticationMethodChanged: False
+
+CA009PolicyState: On
+CA009SessionControlObserved: PersistentBrowserSessionMode
+CA009ConditionalAccessResult: Success
+CA009StaySignedInPromptPresented: False
+CA009PasswordRequiredAfterBrowserRestart: True
+CA009BrowserPersistenceTest: Passed
+
+CA010DependencyReviewWindowDays: 30
+CA010DeviceRegistrationInteractiveEventCount: 0
+CA010DeviceRegistrationNonInteractiveEventCount: 0
+CA010ResourceExceptionRequired: False
+CA010PolicyState: On
+CA010DeviceCodeBrowserBlocked: True
+CA010ConditionalAccessResult: Failure
+CA010GrantControlObserved: Block
+CA010ClientErrorUsedAsAuthoritativeEvidence: False
+
+EmergencyExclusionGroupDirectMemberCount: 2
+EmergencyAccount01PreEnforcementTest: Passed
+EmergencyAccount02PreEnforcementTest: Passed
+EmergencyAccount01PostEnforcementTest: Passed
+EmergencyAccount02PostEnforcementTest: Passed
+IndependentRecoverySessionMaintained: True
+
+PermanentGlobalAdministratorCountObserved: 4
+LeastPrivilegeFindingRecorded: True
+LeastPrivilegeRemediationDeferred: True
+LeastPrivilegeRemediationTarget: Privileged Identity Management project
+
+SuccessfulConditionalAccessUpdateCount: 5
+EnforcedPolicyCount: 5
+MicrosoftManagedPolicyCount: 0
+RollbackInvoked: False
+RollbackReadinessConfirmed: True
+
+RequiredScreenshotCount: 17
+MissingScreenshotCount: 0
+ScreenshotPrivacyReviewPassed: True
+SensitiveIdentifiersPublished: 0
+ValidationPassed: True
+
+PrivacyNote: Public evidence excludes user principal names, personal names, object identifiers, tenant identifiers, request identifiers, session identifiers, IP addresses, token identifiers, authentication codes, credentials, and private emergency-account details.
